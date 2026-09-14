@@ -1,0 +1,21 @@
+{
+  "name": "medtachy",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Medtachy - MERN application for hospital bed, caretaker, appointment, and emergency service management.",
+  "scripts": {
+    "install:all": "npm install && npm --prefix backend install && npm --prefix frontend install",
+    "backend": "npm --prefix backend run dev",
+    "frontend": "npm --prefix frontend start",
+    "dev": "concurrently -n backend,frontend -c blue,green \"npm run backend\" \"npm run frontend\""
+  },
+  "keywords": [
+    "medtachy",
+    "mern",
+    "healthcare"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  }
+}
