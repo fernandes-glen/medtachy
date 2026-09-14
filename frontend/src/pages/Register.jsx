@@ -1,5 +1,12 @@
 import React from "react";
-import { Box, Button, Container, Paper, TextField, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  Container,
+  Paper,
+  TextField,
+  Typography,
+} from "@mui/material";
 import { Link as RouterLink } from "react-router-dom";
 
 /**
@@ -18,8 +25,20 @@ function Register() {
 
         <Box component="form" sx={{ mt: 2 }} noValidate>
           <TextField label="Full name" fullWidth margin="normal" disabled />
-          <TextField label="Email" type="email" fullWidth margin="normal" disabled />
-          <TextField label="Password" type="password" fullWidth margin="normal" disabled />
+          <TextField
+            label="Email"
+            type="email"
+            fullWidth
+            margin="normal"
+            disabled
+          />
+          <TextField
+            label="Password"
+            type="password"
+            fullWidth
+            margin="normal"
+            disabled
+          />
           <Button variant="contained" fullWidth sx={{ mt: 2 }} disabled>
             Create Account
           </Button>

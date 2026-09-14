@@ -75,6 +75,36 @@ npm run backend
 npm run frontend
 ```
 
+## Scripts
+
+### Root (`/`)
+
+| Script | Description |
+|--------|-------------|
+| `npm run install:all` | Install root, backend, and frontend dependencies |
+| `npm run dev` | Run backend + frontend together (via `concurrently`) |
+| `npm run backend` | Run the backend in watch mode |
+| `npm run frontend` | Run the frontend dev server |
+| `npm start` | Start the backend (production mode) |
+| `npm run build` | Build the frontend for production |
+
+### Backend (`/backend`)
+
+| Script | Description |
+|--------|-------------|
+| `npm run dev` | Start with `nodemon` (auto-reload) |
+| `npm start` | Start with `node` (production) |
+| `npm run verify:db` | Verify the MongoDB connection logic |
+| `npm run verify:cors` | Verify the CORS configuration |
+
+### Frontend (`/frontend`)
+
+| Script | Description |
+|--------|-------------|
+| `npm run dev` / `npm start` | Start the Vite dev server |
+| `npm run build` | Build for production |
+| `npm run preview` | Preview the production build locally |
+
 ## Health Check
 
 Once the backend is running, verify it with:
