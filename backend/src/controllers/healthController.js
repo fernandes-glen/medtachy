@@ -1,19 +1,11 @@
-const mongoose = require("mongoose");
+const { getHealthStatus } = require("../services/healthService");
 
 /**
  * Basic health-check endpoint.
- * Returns service status, uptime, and the current database connection state.
+ * Delegates to the health service and returns the status payload.
  */
 const getHealth = (req, res) => {
-  const dbStates = ["disconnected", "connected", "connecting", "disconnecting"];
-
-  res.status(200).json({
-    status: "ok",
-    service: "medtachy-backend",
-    timestamp: new Date().toISOString(),
-    uptime: process.uptime(),
-    database: dbStates[mongoose.connection.readyState] || "unknown",
-  });
+  res.status(200).json(getHealthStatus());
 };
 
 module.exports = { getHealth };
