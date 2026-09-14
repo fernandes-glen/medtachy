@@ -1,15 +1,15 @@
 const mongoose = require("mongoose");
 
 /**
- * Connect to MongoDB using the MONGO_URI environment variable.
+ * Connect to MongoDB using the MONGODB_URI environment variable.
  * The server can still start if the connection fails so that the
  * health-check endpoint remains available during local development.
  */
 const connectDB = async () => {
-  const uri = process.env.MONGO_URI;
+  const uri = process.env.MONGODB_URI;
 
   if (!uri) {
-    console.warn("[db] MONGO_URI not set. Skipping MongoDB connection.");
+    console.warn("[db] MONGODB_URI not set. Skipping MongoDB connection.");
     return;
   }
 
