@@ -10,10 +10,7 @@
  */
 
 // Default development origins (Vite: 5173, CRA/legacy: 3000).
-const DEFAULT_DEV_ORIGINS = [
-  "http://localhost:5173",
-  "http://localhost:3000",
-];
+const DEFAULT_DEV_ORIGINS = ["http://localhost:5173", "http://localhost:3000"];
 
 function getAllowedOrigins() {
   const fromEnv = process.env.CORS_ORIGINS || process.env.CLIENT_ORIGIN;

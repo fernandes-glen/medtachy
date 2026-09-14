@@ -1,8 +1,8 @@
-import apiClient from "./apiClient";
+import apiRequest from "./api";
 
 /**
  * Health-related API calls.
  */
 export function getHealth() {
-  return apiClient("/api/health");
+  return apiRequest("/api/health");
 }
