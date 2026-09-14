@@ -36,12 +36,12 @@ theming, database connectivity, and a health-check API.
 
 ## Technology Stack
 
-| Layer        | Technology                                         |
-| ------------ | -------------------------------------------------- |
-| **Frontend** | React 18, Material UI, React Router (Vite)         |
-| **Backend**  | Node.js, Express                                   |
-| **Database** | MongoDB via Mongoose                               |
-| **Tooling**  | Vite, nodemon, concurrently, dotenv                |
+| Layer        | Technology                                 |
+| ------------ | ------------------------------------------ |
+| **Frontend** | React 18, Material UI, React Router (Vite) |
+| **Backend**  | Node.js, Express                           |
+| **Database** | MongoDB via Mongoose                       |
+| **Tooling**  | Vite, nodemon, concurrently, dotenv        |
 
 ## Prerequisites
 
@@ -86,13 +86,13 @@ cp .env.example .env
 The backend reads configuration from `backend/.env` (never commit this file —
 it is git-ignored). Use `backend/.env.example` as a template.
 
-| Variable       | Required | Example                                  | Description                                   |
-| -------------- | -------- | ---------------------------------------- | --------------------------------------------- |
-| `PORT`         | no       | `5000`                                   | Port the Express server listens on            |
-| `NODE_ENV`     | no       | `development`                            | Runtime environment                           |
-| `MONGODB_URI`  | yes      | `mongodb://127.0.0.1:27017/medtachy`     | MongoDB connection string                     |
-| `JWT_SECRET`   | no\*     | `your_secret`                            | Secret for signing JWTs (used in auth epic)   |
-| `CORS_ORIGINS` | no       | `http://localhost:5173,http://localhost:3000` | Comma-separated allowed frontend origins |
+| Variable       | Required | Example                                       | Description                                 |
+| -------------- | -------- | --------------------------------------------- | ------------------------------------------- |
+| `PORT`         | no       | `5000`                                        | Port the Express server listens on          |
+| `NODE_ENV`     | no       | `development`                                 | Runtime environment                         |
+| `MONGODB_URI`  | yes      | `mongodb://127.0.0.1:27017/medtachy`          | MongoDB connection string                   |
+| `JWT_SECRET`   | no\*     | `your_secret`                                 | Secret for signing JWTs (used in auth epic) |
+| `CORS_ORIGINS` | no       | `http://localhost:5173,http://localhost:3000` | Comma-separated allowed frontend origins    |
 
 \* Not used until the authentication epic, but defined early.
 
