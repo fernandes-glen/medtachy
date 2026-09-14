@@ -1,18 +1,6 @@
-import { createTheme } from "@mui/material/styles";
-
 /**
- * Central Material UI theme configuration for Medtachy.
- * Extend palette, typography, and component overrides here.
+ * Barrel file for the theme module.
+ * The theme itself is defined in ./theme.js so it can be imported
+ * directly (src/theme/theme.js) or via this folder's default export.
  */
-const theme = createTheme({
-  palette: {
-    primary: { main: "#1976d2" },
-    secondary: { main: "#dc004e" },
-    background: { default: "#f5f7fa" },
-  },
-  typography: {
-    fontFamily: "Roboto, Helvetica, Arial, sans-serif",
-  },
-});
-
-export default theme;
+export { default } from "./theme";
