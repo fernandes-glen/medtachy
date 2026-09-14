@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 /**
  * Connect to MongoDB using the MONGO_URI environment variable.
@@ -9,7 +9,7 @@ const connectDB = async () => {
   const uri = process.env.MONGO_URI;
 
   if (!uri) {
-    console.warn('[db] MONGO_URI not set. Skipping MongoDB connection.');
+    console.warn("[db] MONGO_URI not set. Skipping MongoDB connection.");
     return;
   }
 
