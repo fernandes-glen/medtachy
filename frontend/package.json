@@ -2,7 +2,8 @@
   "name": "medtachy-frontend",
   "version": "1.0.0",
   "private": true,
-  "description": "Medtachy frontend (React + Material UI).",
+  "type": "module",
+  "description": "Medtachy frontend (React + Material UI, built with Vite).",
   "dependencies": {
     "@emotion/react": "^11.13.0",
     "@emotion/styled": "^11.13.0",
@@ -10,27 +11,16 @@
     "@mui/material": "^5.16.7",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-router-dom": "^6.30.6",
-    "react-scripts": "5.0.1",
-    "web-vitals": "^4.2.3"
+    "react-router-dom": "^6.30.6"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "vite",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
-  "proxy": "http://localhost:5000",
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.1",
+    "vite": "^5.4.2"
   }
 }

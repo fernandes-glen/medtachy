@@ -13,7 +13,7 @@ features are added.
 ```
 medtachy/
 │
-├── frontend/        # React + Material UI single-page application
+├── frontend/        # React + Material UI single-page application (Vite)
 ├── backend/         # Node.js / Express REST API + MongoDB
 ├── .gitignore
 ├── README.md
@@ -22,7 +22,7 @@ medtachy/
 
 ## Tech Stack
 
-- **Frontend:** React, Material UI
+- **Frontend:** React, Material UI, React Router (built with Vite)
 - **Backend:** Node.js, Express
 - **Database:** MongoDB (via Mongoose)
 
