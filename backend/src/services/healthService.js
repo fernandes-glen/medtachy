@@ -8,7 +8,8 @@ function getHealthStatus() {
   const dbStates = ["disconnected", "connected", "connecting", "disconnecting"];
 
   return {
-    status: "ok",
+    status: "OK",
+    message: "Medtachy API is running",
     service: "medtachy-backend",
     timestamp: new Date().toISOString(),
     uptime: process.uptime(),
