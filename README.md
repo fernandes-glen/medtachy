@@ -83,6 +83,27 @@ Once the backend is running, verify it with:
 curl http://localhost:5000/api/health
 ```
 
+The `database` field reflects the MongoDB connection state
+(`connected` / `disconnected`).
+
+## Database
+
+The backend connects to MongoDB via Mongoose using the `MONGODB_URI`
+environment variable. You can point it at a local instance or a hosted
+cluster (e.g. MongoDB Atlas):
+
+```dotenv
+MONGODB_URI=mongodb://127.0.0.1:27017/medtachy
+```
+
+To verify the database connection logic without a running server, use the
+in-memory verification script:
+
+```bash
+cd backend
+npm run verify:db
+```
+
 ## License
 
 MIT
