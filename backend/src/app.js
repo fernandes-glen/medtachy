@@ -1,6 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 
+const { corsOptions } = require("./config/cors");
 const requestLogger = require("./middleware/requestLogger");
 const { notFound, errorHandler } = require("./middleware/errorHandler");
 const healthRoutes = require("./routes/healthRoutes");
@@ -8,11 +9,7 @@ const healthRoutes = require("./routes/healthRoutes");
 const app = express();
 
 // Global middleware
-app.use(
-  cors({
-    origin: process.env.CLIENT_ORIGIN || "*",
-  }),
-);
+app.use(cors(corsOptions));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(requestLogger);

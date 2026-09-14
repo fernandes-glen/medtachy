@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node src/server.js",
     "dev": "nodemon src/server.js",
-    "verify:db": "node scripts/verify-db.js"
+    "verify:db": "node scripts/verify-db.js",
+    "verify:cors": "node scripts/verify-cors.js"
   },
   "keywords": [
     "medtachy",
